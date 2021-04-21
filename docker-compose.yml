@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  #    db:
+  #        image: mariadb:10.5.6
+  #        environment:
+  #            MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+  #        volumes:
+  #            - ./data:/var/lib/mysql
+  app:
+    build:
+      context: .
+      target: php
+      args:
+        GIT_EMAIL: ${GIT_EMAIL}
+        GIT_USER_NAME: ${GIT_USER_NAME}
+    restart: on-failure
+    #        depends_on:
+    #            - db
+    volumes:
+      - ./workspace:/srv
+  nginx:
+    build:
+      context: .
+      target: nginx
+    depends_on:
+      - app
+    volumes:
+      - ./workspace:/srv
+    ports:
+      - "8000:8000"
