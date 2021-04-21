@@ -1,8 +1,8 @@
 # docker-php
 
-This is my Docker stack for php development
-It contains a php service with : php-fpm(listening 9000), composer and symfony cli
-a nginx service watching /srv/app/public(/index.php)
+This is my Docker stack for php development <br>
+It contains a php service with : php-fpm(listening 9000), composer and symfony cli <br>
+a nginx service watching /srv/app/public(/index.php) <br>
 Optionnaly you can add a Database service
 
 To use it:
