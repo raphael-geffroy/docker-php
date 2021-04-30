@@ -3,7 +3,7 @@
 This is my Docker stack for php development <br>
 It contains a php service with : php-fpm(listening 9000), composer and symfony cli <br>
 a nginx service watching /srv/app/public(/index.php) <br>
-Optionnaly you can add a Database service
+a postgresql <br>
 
 To use it:
 
