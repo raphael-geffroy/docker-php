@@ -4,10 +4,7 @@ This is my Docker stack for php development <br>
 It contains a php service with : php-fpm(listening 9000), composer and symfony cli <br>
 a nginx service watching /srv/app/public(/index.php) <br>
 a postgresql <br>
-
-To use it:
-
-- add a .env file with GIT_EMAIL & GIT_USER_NAME
+a stfp service (listening 2200) with credentials foo:pass<br>
 
 If you want to create a symfony project :
 
