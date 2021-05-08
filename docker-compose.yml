@@ -11,7 +11,7 @@ services:
     image: rgeffroy/symfony
     restart: on-failure
     depends_on:
-      - db
+      - postgres
     volumes:
       - ./workspace:/srv
   nginx:
